@@ -4,6 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<constant name="struts.multipart.saveDir" value="/upload"></constant>
+	<constant name="struts.multipart.maxSize" value="100000000"/> 
 	
 	<package name="user" extends="struts-default">
 		<!-- UserManage Begin -->
@@ -20,6 +21,29 @@
 
 	</package>
 	<package name="json" extends="json-default">
+		<action name="uploadSample" class="cn.edu.xjtu.manage.action.UploadSampleAction"
+			method="uploadSample">
+			<param name="savePath">/uploadSample</param> 
+			<result name="SUCCESS" type="json">
+				<param name="excludeProperties">ID</param> 
+				<param name="excludeProperties">remark</param> 
+			</result>
+		</action>
+		
+		<action name="listTask" method="list" class="cn.edu.xjtu.manage.action.UploadSampleAction">
+			<result name="SUCCESS" type="json"></result>
+		</action>
+		<action name="delTask" class="cn.edu.xjtu.manage.action.UploadSampleAction"
+			method="delete">
+			<result name="SUCCESS" type="json">
+			</result>
+		</action>
+		<action name="viewReport" class="cn.edu.xjtu.manage.action.UploadSampleAction"
+			method="viewReport">
+			<result name="SUCCESS" type="json">
+			</result>
+		</action>
+		
 		<action name="reloadAllConfig" method="restart" class="cn.edu.xjtu.manage.action.ControlAction">
 			<result name="SUCCESS" type="json"></result>
 		</action>

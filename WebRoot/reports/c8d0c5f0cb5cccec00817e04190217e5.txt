@@ -1,0 +1,187 @@
+		                 .__  ___.                   
+		  _____  _____   |  | \_ |__    ____ ___  ___
+		 /     \ \__  \  |  |  | __ \  /  _ \\  \/  /
+		|  Y Y  \ / __ \_|  |__| \_\ \(  <_> )>    < 
+		|__|_|  /(____  /|____/|___  / \____//__/\_ \
+		      \/      \/           \/              \/
+		                                                    
+=====Sample Summary=====
+File name: sample.exe
+MD5: 1D179DD43542A9B97775ED6F5AA5ECFA
+SHA1: A855659C70F0CAB694C3F35B8CB4EF1B913E7329
+SHA256: 925113CCC596B6B446F4B4CC788B9B3AD060000C80DCC533D5B3BE2C3D8C456B
+
+=====Major Threats=====
+[Load driver] \Registry\Machine\System\CurrentControlSet\Services\Fastfat
+
+=====Behavior Details=====
+
+Create process:
+sample.exe --> C:\WINDOWS\Temp\svchost.exe
+svchost.exe --> C:\WINDOWS\system32\netsh.exe
+svchost.exe --> C:\WINDOWS\system32\wbem\wmiprvse.exe
+
+Create remote thread:
+sample.exe --> svchost.exe
+svchost.exe --> netsh.exe
+svchost.exe --> wmiprvse.exe
+
+Create file:
+sample.exe --> C:\WINDOWS\TEMP\svchost.exe
+svchost.exe --> C:\Documents and Settings\Administrator\「开始」菜单\程序\启动\ba4c12bee3027d94da5c81db2d196bfd.exe
+wmiprvse.exe --> C:\WINDOWS\TEMP\Perflib_Perfdata_614.dat
+svchost.exe --> C:\WINDOWS\TEMP\svchost.exe.tmp
+
+Overwrite file:
+svchost.exe --> C:\Documents and Settings\Administrator\「开始」菜单\程序\启动\ba4c12bee3027d94da5c81db2d196bfd.exe
+
+Load driver:
+svchost.exe --> \Registry\Machine\System\CurrentControlSet\Services\Fastfat
+
+Create key:
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Fusion\GACChangeNotification\Default
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\ba4c12bee3027d94da5c81db2d196bfd
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+netsh.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Multimedia\Audio
+netsh.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Multimedia\Audio Compression Manager
+netsh.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Multimedia\Audio Compression Manager\MSACM
+netsh.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Multimedia\Audio Compression Manager\Priority v4.00
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\traceIdentifier
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\traceIdentifier
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\traceIdentifier
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\Napmontr
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\traceIdentifier
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\LocalConfig
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\LocalConfig\Enroll
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\LocalConfig\Enroll\HcsGroups
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\Shas
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\Qecs
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\napagent\LocalConfig\UI
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\MediaProperties
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\MediaProperties\PrivateProperties
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\MediaProperties\PrivateProperties\Joystick
+wmiprvse.exe --> \REGISTRY\USER\S-1-5-20\Software\Microsoft\Multimedia\Audio
+wmiprvse.exe --> \REGISTRY\USER\S-1-5-20\Software\Microsoft\Multimedia\Audio Compression Manager
+wmiprvse.exe --> \REGISTRY\USER\S-1-5-20\Software\Microsoft\Multimedia\Audio Compression Manager\MSACM
+wmiprvse.exe --> \REGISTRY\USER\S-1-5-20\Software\Microsoft\Multimedia\Audio Compression Manager\Priority v4.00
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\AuthorizedApplications\List
+svchost.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy
+svchost.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Epoch
+svchost.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\MediaResources\msvideo
+
+Set value key:
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\AppData ["C:\Documents and Settings\Administrator\Application Data"]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [1C 78 F4 41 94 0B 88 3A ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [94 48 AF 51 81 5E A6 A3 ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [80 57 54 FF B2 83 E4 1E ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [15 76 65 7C 77 B4 F5 B7 ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [34 7A 93 ED 7B 2C FC 7B ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [B8 CE 08 8F 83 A5 D1 4C ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [15 E4 D6 43 4D 7C 98 00 ...]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [EA 5D E0 0A C0 BA 8F 2F ...]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cache ["C:\Documents and Settings\Administrator\Local Settings\Temporary Internet Files"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\ba4c12bee3027d94da5c81db2d196bfd\US ["!"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Environment\SEE_MASK_NOZONECHECKS ["1"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Personal ["D:\Backup\我的文档"]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Documents ["C:\Documents and Settings\All Users\Documents"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Desktop ["C:\Documents and Settings\Administrator\桌面"]
+sample.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Desktop ["C:\Documents and Settings\All Users\桌面"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass [0x1]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName [0x1]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet [0x1]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cookies ["C:\Documents and Settings\Administrator\Cookies"]
+sample.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\ShellNoRoam\MUICache\C:\WINDOWS\TEMP\svchost.exe ["svchost"]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [81 4A 2B 75 65 EA B1 57 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [51 D2 1D 30 90 D8 6D 43 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [89 37 48 61 3F 46 69 A2 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [CD 64 EE F8 DC B3 FB B9 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [8F BB 7E BB 2F 59 EF 99 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [1D DA B4 F3 FF EB F6 97 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [D6 DB 11 13 23 A4 4D 13 ...]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [3F 15 69 F0 C8 C0 49 33 ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [2D 35 50 39 F4 4F 66 94 ...]
+svchost.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Run\ba4c12bee3027d94da5c81db2d196bfd [""C:\WINDOWS\TEMP\svchost.exe" .."]
+svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\ba4c12bee3027d94da5c81db2d196bfd [""C:\WINDOWS\TEMP\svchost.exe" .."]
+svchost.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Startup ["C:\Documents and Settings\Administrator\「开始」菜单\程序\启动"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\LogSessionName ["stdout"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\Active [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\ControlFlags [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\traceIdentifier\Guid ["5f31090b-d990-4e91-b16d-46121d0255aa"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappcfg\traceIdentifier\BitNames [" Error Unusual Info Debug"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\LogSessionName ["stdout"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\Active [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\ControlFlags [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\traceIdentifier\Guid ["5f31090b-d990-4e91-b16d-46121d0255aa"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\eappprxy\traceIdentifier\BitNames [" Error Unusual Info Debug"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [64 A3 41 7E 9D 53 63 2D ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [C9 50 22 33 C4 AE C7 66 ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [5C 52 87 EE 82 9D 0F CA ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [B2 B0 A4 60 7B FE 99 55 ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [83 71 68 FD 3A F6 74 BF ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [AB 55 B3 C8 5F DB 12 84 ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [88 E5 C3 4C C5 42 7D BB ...]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\LogSessionName ["stdout"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\Active [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\ControlFlags [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\traceIdentifier\Guid ["8aefce96-4618-42ff-a057-3536aa78233e"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\QUtil\traceIdentifier\BitNames [" Error Unusual Info Debug"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\EnableFileTracing [0x0]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\EnableConsoleTracing [0x0]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\FileTracingMask [0xFFFF0000]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\ConsoleTracingMask [0xFFFF0000]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\MaxFileSize [0x100000]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Tracing\FWCFG\FileDirectory ["%windir%\tracing"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\LogSessionName ["stdout"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\Active [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\ControlFlags [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\Napmontr\Guid ["710adbf0-ce88-40b4-a50d-231ada6593f0"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\NAP\Netsh\Napmontr\BitNames [" NAP_TRACE_BASE NAP_TRACE_NETSH"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\LogSessionName ["stdout"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\Active [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\ControlFlags [0x1]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\traceIdentifier\Guid ["b0278a28-76f1-4e15-b1df-14b209a12613"]
+netsh.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Tracing\Microsoft\qagent\traceIdentifier\BitNames [" Error Unusual Info Debug"]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [FA 06 41 5B 83 64 FD D6 ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [93 32 FC B1 43 AC AA D9 ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [68 A2 5C B9 09 2E 28 79 ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [72 D6 6A 3C 65 35 E3 CE ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [B0 52 75 31 60 5F A9 C1 ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [3F E6 24 80 DA 1C 69 03 ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [89 C2 9D DF F6 1A E4 8A ...]
+wmiprvse.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [DD A1 17 F0 51 5F 1F E5 ...]
+netsh.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\AuthorizedApplications\List\C:\WINDOWS\Temp\svchost.exe ["C:\WINDOWS\Temp\svchost.exe:*:Enabled:svchost.exe"]
+svchost.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Epoch\Epoch [0x7A]
+svchost.exe --> \REGISTRY\USER\S-1-5-21-1177238915-1647877149-2147093213-500\Software\ba4c12bee3027d94da5c81db2d196bfd\3652f46ef1d77386dc985c42db2a43f8 ["TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAABQRQAATAEDAChbnFAAAAAAAAAAAOAAAiELAQgAACIAAAAEAAAAAAAAbkAAAAAgAAAAYAAAAABAAAAgAA..."]
+
+Delete value key:
+wmiprvse.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\PerfOS\Performance\Error Count
+
+Try to connect domain:
+mojrime.no-ip.org

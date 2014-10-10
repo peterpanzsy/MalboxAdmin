@@ -10,7 +10,6 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import cn.edu.xjtu.manage.business.User;
-import cn.edu.xjtu.manage.dao.HoneyPotDao;
 import cn.edu.xjtu.manage.dao.UserDao;
 
 public class UserAction extends ActionSupport{
