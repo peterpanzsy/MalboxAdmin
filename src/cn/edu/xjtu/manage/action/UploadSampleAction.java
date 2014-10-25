@@ -19,6 +19,7 @@ import org.apache.struts2.ServletActionContext;
 
 import cn.edu.xjtu.manage.business.Sample;
 import cn.edu.xjtu.manage.dao.SampleDao;
+import cn.edu.xjtu.tools.HTMLParser;
 import cn.edu.xjtu.tools.MD5Filter;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -165,7 +166,14 @@ public class UploadSampleAction  extends ActionSupport{
 		String absolutePath=getWebFileRoot()+this.REPORTPATH+fileMD5+".txt";
 		File reportFile=new File(absolutePath);
 		String str=null;	
-		if(regulation.endsWith("net")){
+		try {
+			report = HTMLParser.parse(reportFile, regulation);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "SUCCESS";
+	}
+		/*if(regulation.endsWith("net")){
 			try {
 				BufferedReader br=new BufferedReader(new FileReader(reportFile));
 				while((str=br.readLine())!=null){//未到文本结尾
@@ -237,9 +245,8 @@ public class UploadSampleAction  extends ActionSupport{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		return "SUCCESS";
-	}
+		}*/
+	
 	
 	
 	public String getReport() {

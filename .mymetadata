@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="BotwallAdmin"
+  name="MalboxAdmin"
   id="myeclipse.1386661415162"
   context-root="/BotwallAdmin"
   j2ee-spec="5.0"
-  archive="BotwallAdmin.war">
+  archive="MalboxAdmin.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>

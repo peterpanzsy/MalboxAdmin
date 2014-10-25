@@ -92,7 +92,4 @@ public class Sample {
 		this.remark = remark;
 	}
 	
-	
-
-	
 }
