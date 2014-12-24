@@ -8,12 +8,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<head>
 
 		<base href="<%=basePath%>">
-	  	<title>Malbox管理系统</title>
+	  	<title>便携式蜜罐管理平台</title>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">    
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-		<meta http-equiv="description" content="Malbox管理">
+		<meta http-equiv="description" content="便携式蜜罐管理平台">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		
@@ -86,11 +86,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	      	<div>
 	      	<ul style="margin-top:10px;margin-bottom:-80px;float:left">
 	      		<img style="width:40%;margin-left:-100px;" alt="BotWall 管理系统" src="images/eagleeye-dark.png">
-	      	 	<h4 style="color:#eee">Malbox管理系统</h4>
+	      	 	<h4 style="color:#eee">便携式蜜罐管理平台</h4>
 	      	</ul>
 	        <ul class="nav navbar-nav navbar-right" style="margin-top:10px;margin-right:15px;float:left">
 	          <li class="active" style="color:#eee;font-size:15px;">	 
-	          	产品名称：Malbox管理设备</br>
+	          	产品名称：便携式蜜罐管理平台</br>
 	          	产品型号：MB-0001</br>
 	          	版本号：Version 1.0	
 	          </li>
@@ -120,7 +120,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 </div>
 		    </div>
 		    <div style="float:left;width:600px;color:white;margin-top:50px;margin-left:50px;">
-				 	点击选择文件，将恶意文件上传。Malbox将对其进行分析，一段时间之后当下面列表中“是否分析完毕”字段变为“是”，则可查看恶意样本的各种行为的报告。
+				 	点击选择文件，将恶意文件上传。便携式蜜罐将对其进行分析，一段时间之后当下面列表中“是否分析完毕”字段变为“是”，则可查看恶意样本的各种行为的报告。
 			</div>	
 				 
 		  </div>

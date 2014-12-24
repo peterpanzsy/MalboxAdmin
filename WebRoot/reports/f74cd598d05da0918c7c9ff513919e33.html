@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>MalBox分析报告--FILE_MD5</title>    
+    <link rel="stylesheet" href="../css/com.css">
+    <link rel="stylesheet" href="../css/analyse.css">
+    <link rel="stylesheet" href="../css/jquery.css">
+    <!--[if lte IE 9]>
+        <script src="../js2/html5.js"></script>
+        <script type="text/javascript">
+            var BROWSER = 'IE';
+        </script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <script src="../js2/DD_belatedPNG-min.js"></script>
+    <script>
+        DD_belatedPNG.fix('.pngfix');
+    </script>
+    <![endif]-->    
+<style type="text/css">#uyan_top{display: none !important;}#uyan_count{display: none !important;}#uyan_like{display: none !important;}.uyan_cmt_exp a{color: #303030 !important;}.uyan_cmt_exp div{color: #303030 !important;}.uyan_cmt_txt{color: #303030 !important;}.uyan_cmt_utname{color: #303030 !important;}.uyan_cmt_uname{color: #3B5998 !important;}#uyan_tts{display: none !important;}#uyan_sort{display: none !important;}</style></head>
+<body>   
+
+<div class="main">
+<div class="mainbox clearfix">
+<div class="titleinfo">
+<div class="icon pngfix" id="fileicon"><img class="suofang" src="../icons/exe.png"/></div>
+<div class="titledet">
+<p class="t signline">文件名称: GeoIP.exe</p>
+<p class="signline">文件大小: 194560 bytes</p>
+</div>
+<div class="titledet">
+<p class="signline">MD5: 8a1fa42f899741627f346251f20817fb</p>
+<p class="signline">SHA1: 7fe46316a966caceccf62ed62b7571312f34c727</p>
+</div>
+</div>
+<div id="detailinfo" class="detailinfo">
+<div class="detaillist">
+<div class="dbox clearfix" id="dangerbehav">
+<div class="dt"><em class="icon pngfix"></em>主要威胁</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main">
+<li class=""><span class="nan_title">威胁判定</span>疑似恶意代码; </li><br />
+<li class=""><span class="nan_title">在敏感目录创建文件</span> C:\monitorlog.log</li>
+<li class=""><span class="nan_title">在敏感目录创建文件</span> C:\monitorlog.pcap</li>
+</ul></div></div>
+<div class="dbox clearfix" id="procctrl">
+<div class="dt"><em class="icon pngfix"></em>进程行为</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main" style="color: #000">
+<li><div><span class="nan_title">行为描述: </span>创建进程</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">HoneyBoxServer. --> C:\Wireshark\dumpcap.exe</p>
+
+<p class="signline">FTPClient108.ex --> C:\upload\GeoIP.exe</p>
+
+<p class="signline">HoneyBoxServer. --> F:\WINDOWS\system32\cmd.exe</p>
+
+<p class="signline">cmd.exe --> C:\MonitorControl.exe</p>
+
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">行为描述: </span>创建远程线程</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">HoneyBoxServer. --> dumpcap.exe</p>
+
+<p class="signline">FTPClient108.ex --> GeoIP.exe</p>
+
+<p class="signline">HoneyBoxServer. --> cmd.exe</p>
+
+<p class="signline">cmd.exe --> MonitorControl.</p>
+
+</div><div class="clearfix"></div>
+</li>
+</ul></div></div>
+<div class="dbox clearfix" id="filectrl">
+<div class="dt"><em class="icon pngfix"></em>文件行为</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main" style="color: #000">
+<li><div><span class="nan_title">行为描述: </span>创建文件</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">svchost.exe --> C:\monitorlog.log</p>
+
+<p class="signline">dumpcap.exe --> C:\monitorlog.pcap</p>
+
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">行为描述: </span>删除文件</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">HoneyBoxServer. --> C:\monitorlog.pcap</p>
+
+</div><div class="clearfix"></div>
+</li>
+</ul></div></div>
+<div class="dbox clearfix" id="regctrl">
+<div class="dt"><em class="icon pngfix"></em>注册表行为</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main" style="color: #000">
+<li><div><span class="nan_title">行为描述: </span>创建注册表键</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">svchost.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\SessionInformation</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+
+<p class="signline">services.exe --> \REGISTRY</p>
+
+<p class="signline">services.exe --> HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\DeviceClasses</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be10-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be11-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0e-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0f-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be08-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be09-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0a-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0b-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0c-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0d-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{f5fbdf6c-6952-11e3-9a19-0025643b2dcb}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be12-6950-11e3-9a18-806d6172696f}</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Fusion\GACChangeNotification\Default</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\BagMRU</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1\0</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell</p>
+
+<p class="signline">cmd.exe --> HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio</p>
+
+<p class="signline">cmd.exe --> HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio Compression Manager</p>
+
+<p class="signline">cmd.exe --> HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio Compression Manager\MSACM</p>
+
+<p class="signline">cmd.exe --> HKEY_CURRENT_USER\Software\Microsoft\Multimedia\Audio Compression Manager\Priority v4.00</p>
+
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">行为描述: </span>修改注册表键值</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\SessionInformation\ProgramCount [0x3]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [58 07 6F A2 E3 C7 71 23 ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [7A 69 F6 0A 32 3E 75 DA ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [23 D8 4B 43 E0 A8 9B B2 ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [E0 7F 2D 80 D8 FB 43 BB ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [30 D0 6C F8 FA 19 8F 4B ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [6F 4E 62 B8 E5 DA AC 76 ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [EA 8D 17 E7 4C 0B FD 2A ...]</p>
+
+<p class="signline">dumpcap.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [AD BE 3C 53 5B 43 39 FD ...]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Personal ["d:\My Documents"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be10-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be11-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0e-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0f-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be08-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be09-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0a-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0b-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0c-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0d-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{f5fbdf6c-6952-11e3-9a19-0025643b2dcb}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be12-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Documents ["F:\Documents and Settings\All Users\Documents"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Desktop ["F:\Documents and Settings\Administrator\����"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Desktop ["F:\Documents and Settings\All Users\����"]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass [0x1]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName [0x1]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet [0x1]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect [0x0]</p>
+
+<p class="signline">FTPClient108.ex --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cookies ["F:\Documents and Settings\Administrator\Cookies"]</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\SessionInformation\ProgramCount [0x4]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\AppData ["F:\Documents and Settings\Administrator\Application Data"]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [87 1C FE C3 C6 82 E8 89 ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [22 48 3F F1 3A 23 98 AC ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [F0 DD B2 1E DA 4C BB B5 ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [1B B9 87 4C 57 34 8C 3F ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [35 68 8C E1 BB 7E 5D 95 ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [03 0F D5 2F 01 47 7E 61 ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [7F 2C BB 35 5E 0B 64 DC ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [25 39 9C AC 85 0C 51 24 ...]</p>
+
+<p class="signline">GeoIP.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cache ["F:\Documents and Settings\Administrator\Local Settings\Temporary Internet Files"]</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\BagMRU\NodeSlots [02 02 02 02 02 02 02 02 ...]</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\BagMRU\MRUListEx [01 00 00 00 02 00 00 00 ...]</p>
+
+<p class="signline">explorer.exe --> HKEY_CURRENT_USER\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+
+<p class="signline">cmd.exe --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [96 65 4C D1 DE F6 88 1E ...]</p>
+
+<p class="signline">MonitorControl. --> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [ED 9C F9 B9 BE 83 30 C3 ...]</p>
+
+</div><div class="clearfix"></div>
+</li>
+</ul></div></div>
+<div class="dbox clearfix" id="netctrl">
+<div class="dt"><em class="icon pngfix"></em>网络行为</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main" style="color: #000">
+<li><div><span class="nan_title">行为描述: </span>TCP连接</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">222.91.160.245</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">行为描述: </span>UDP连接</div>
+<div class="d_msg"><span class="nan_title">行为信息: </span>
+<p class="signline">202.117.54.255</p>
+<p class="signline">192.168.0.255</p>
+<p class="signline">239.255.255.250</p>
+<p class="signline">192.168.4.255</p>
+<p class="signline">192.168.1.255</p>
+<p class="signline">192.168.15.255</p>
+<p class="signline">ff02:0000:0000:0000:0000:0000:0.1.0.2</p>
+<p class="signline">219.245.185.255</p>
+<p class="signline">125.90.93.141</p>
+<p class="signline">ff02:0000:0000:0000:0000:0000:0.1.0.3</p>
+<p class="signline">224.0.0.252</p>
+<p class="signline">255.255.255.255</p>
+<p class="signline">219.245.186.255</p>
+<p class="signline">10.1.27.255</p>
+<p class="signline">224.0.0.251</p>
+<p class="signline">ff02:0000:0000:0000:0000:0000:0.0.0.12</p>
+<p class="signline">192.168.2.255</p>
+<p class="signline">113.107.166.148</p>
+<p class="signline">224.0.0.253</p>
+<p class="signline">10.1.15.255</p>
+<p class="signline">61.185.217.255</p>
+<p class="signline">192.168.3.255</p>
+</div><div class="clearfix"></div>
+</li>
+</ul></div></div>
+<div class="dbox clearfix" id="netctrl">
+<div class="dt"><em class="icon pngfix"></em>所有行为</div>
+<div class="dd clearfix">
+<ul class="ana_ctrl_main" style="color: #000">
+<li><div><span class="nan_title">时间: </span>0.11s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.11s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.11s </div>
+<div class="d_msg"><span class="nan_title">结束进程: </span>
+<p class="multiline">cmd.exe --> cmd.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.11s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.11s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">svchost.exe --> C:\monitorlog.log</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.44s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.44s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation\ProgramCount [0x3]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.44s </div>
+<div class="d_msg"><span class="nan_title">创建远程线程: </span>
+<p class="multiline">HoneyBoxServer. --> dumpcap.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.44s </div>
+<div class="d_msg"><span class="nan_title">删除文件: </span>
+<p class="multiline">HoneyBoxServer. --> C:\monitorlog.pcap</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.44s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">HoneyBoxServer. --> C:\Wireshark\dumpcap.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [58 07 6F A2 E3 C7 71 23 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [6F 4E 62 B8 E5 DA AC 76 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [EA 8D 17 E7 4C 0B FD 2A ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [AD BE 3C 53 5B 43 39 FD ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [30 D0 6C F8 FA 19 8F 4B ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [7A 69 F6 0A 32 3E 75 DA ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [23 D8 4B 43 E0 A8 9B B2 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">dumpcap.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [E0 7F 2D 80 D8 FB 43 BB ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>0.61s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">dumpcap.exe --> C:\monitorlog.pcap</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.44s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">services.exe --> \REGISTRY</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.44s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">services.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\DeviceClasses</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.44s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Personal ["d:\My Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.44s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.44s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0f-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0e-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0e-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be08-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be08-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0f-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be10-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">services.exe --> \REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\DeviceClasses</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">services.exe --> \REGISTRY</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be11-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be11-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.45s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be10-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Documents ["F:\Documents and Settings\All Users\Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be12-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be12-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Desktop ["F:\Documents and Settings\All Users\����"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Desktop ["F:\Documents and Settings\Administrator\����"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{f5fbdf6c-6952-11e3-9a19-0025643b2dcb}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0a-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0b-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0a-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be09-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be09-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0b-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0d-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{f5fbdf6c-6952-11e3-9a19-0025643b2dcb}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0d-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0c-6950-11e3-9a18-806d6172696f}</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.47s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\{3411be0c-6950-11e3-9a18-806d6172696f}\BaseClass ["Drive"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect [0x0]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect [0x0]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.48s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet [0x1]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.50s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">FTPClient108.ex --> C:\upload\GeoIP.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.50s </div>
+<div class="d_msg"><span class="nan_title">创建远程线程: </span>
+<p class="multiline">FTPClient108.ex --> GeoIP.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cookies ["F:\Documents and Settings\Administrator\Cookies"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">FTPClient108.ex --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.53s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation\ProgramCount [0x4]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.53s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.56s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\AppData ["F:\Documents and Settings\Administrator\Application Data"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.56s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.56s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [25 39 9C AC 85 0C 51 24 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [7F 2C BB 35 5E 0B 64 DC ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [03 0F D5 2F 01 47 7E 61 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Cache ["F:\Documents and Settings\Administrator\Local Settings\Temporary Internet Files"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [22 48 3F F1 3A 23 98 AC ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [87 1C FE C3 C6 82 E8 89 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Fusion\GACChangeNotification\Default</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [35 68 8C E1 BB 7E 5D 95 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [1B B9 87 4C 57 34 8C 3F ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.58s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">GeoIP.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [F0 DD B2 1E DA 4C BB B5 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.67s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation\ProgramCount [0x3]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.67s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\SessionInformation</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>1.67s </div>
+<div class="d_msg"><span class="nan_title">结束进程: </span>
+<p class="multiline">GeoIP.exe --> GeoIP.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\MRUListEx [01 00 00 00 02 00 00 00 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1\0</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\NodeSlots [02 02 02 02 02 02 02 02 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1\0</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\MRUListEx [01 00 00 00 02 00 00 00 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\NodeSlots [02 02 02 02 02 02 02 02 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1\0</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1\0</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>7.50s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\BagMRU\1</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>18.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>20.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>21.53s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>23.05s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>25.52s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>28.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>30.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>30.11s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">svchost.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\WBEM\CIMOM</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>32.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>34.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>36.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>38.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>40.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>42.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>52.50s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>54.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>56.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>58.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>60.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>62.03s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.02s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.50s </div>
+<div class="d_msg"><span class="nan_title">创建远程线程: </span>
+<p class="multiline">HoneyBoxServer. --> cmd.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.50s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">HoneyBoxServer. --> F:\WINDOWS\system32\cmd.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Multimedia\Audio Compression Manager\MSACM</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Multimedia\Audio Compression Manager</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Multimedia\Audio Compression Manager\Priority v4.00</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [96 65 4C D1 DE F6 88 1E ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Multimedia\Audio</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.52s </div>
+<div class="d_msg"><span class="nan_title">创建注册表键: </span>
+<p class="multiline">cmd.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Multimedia\Audio Compression Manager</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.53s </div>
+<div class="d_msg"><span class="nan_title">创建远程线程: </span>
+<p class="multiline">cmd.exe --> MonitorControl.</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.53s </div>
+<div class="d_msg"><span class="nan_title">创建文件: </span>
+<p class="multiline">cmd.exe --> C:\MonitorControl.exe</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>64.55s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">MonitorControl. --> \REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography\RNG\Seed [ED 9C F9 B9 BE 83 30 C3 ...]</p>
+</div><div class="clearfix"></div>
+</li>
+<li><div><span class="nan_title">时间: </span>66.05s </div>
+<div class="d_msg"><span class="nan_title">设置注册表键值: </span>
+<p class="multiline">explorer.exe --> \REGISTRY\USER\S-1-5-21-2025429265-1326574676-682003330-500\Software\Microsoft\Windows\ShellNoRoam\Bags\2\Shell\FolderType ["Documents"]</p>
+</div><div class="clearfix"></div>
+</li>
+</ul></div></div>
+
+<footer>
+</footer>
+</body>
+</html>
+

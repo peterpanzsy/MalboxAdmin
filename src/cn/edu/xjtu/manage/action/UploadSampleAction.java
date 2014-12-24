@@ -159,18 +159,25 @@ public class UploadSampleAction  extends ActionSupport{
 		return "SUCCESS";
 	}
 	
-	private String report="";
+	private String report;
 	private String regulation;
 	private String fileMD5;
 	public String viewReport(){
-		String absolutePath=getWebFileRoot()+this.REPORTPATH+fileMD5+".txt";
+		String absolutePath=getWebFileRoot()+this.REPORTPATH+fileMD5+".html";
 		File reportFile=new File(absolutePath);
 		String str=null;	
-		try {
-			report = HTMLParser.parse(reportFile, regulation);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		String[] reglist=regulation.split(",");
+		report="";
+		for (String reg : reglist) {   
+			try {
+				String areport = HTMLParser.parse(reportFile, reg);
+				report+="\n\r";
+				report+=areport;
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} 
+		
 		return "SUCCESS";
 	}
 		/*if(regulation.endsWith("net")){

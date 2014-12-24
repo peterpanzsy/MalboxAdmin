@@ -72,14 +72,14 @@ $(function () {
 							{
 								name : 'name',
 								index : 'name',
-								width : 50,
+								width : 100,
 								align : "center",
 								sortable:true
 							},
 							{
 								name : 'md5',
 								index : 'md5',
-								width : 100,
+								width : 150,
 								align : "center",
 								sortable:true
 							},
@@ -93,26 +93,44 @@ $(function () {
 							{
 								name:'analysis',
 								index:'analysis',
-								width: 50,
+								width: 110,
 								align:'center',
 								sortable:true,
 								formatter:"select",
 								editoptions:{value:"0:否;1:是"}
 							},
+//							{
+//								name:'analysis',
+//								index:'analysis',
+//								width: 100,
+//								align:'center',
+//								sortable:true,
+//								formatter:function(cellvalue,options,rows){
+//									//cellvalue - 当前cell的值  
+//									//options - 该cell的options设置，包括{rowId, colModel,pos,gid}  
+//									//rowObject - 当前cell所在row的值，如{ id=1, name="name1", price=123.1, ...}  
+//									return "<select onchange=viewReport(this.value,'"+rows.md5+"') style='margin:2px 10px 2px 0px;padding:1px;font-size:14px;font-family:'Microsoft YaHei''>" +
+//											"<option value='none' selected>请选择规则</option><option value='net'>网络行为</option><option value='register'>注册表行为</option><option value='file'>文件行为</option>" +
+//											"<option value='process'>进程行为</option><option value='all'>所有行为</option>" +
+//											"</select>";
+//								}
+//							},
 							{
-								name:'analysis',
-								index:'analysis',
-								width: 100,
+								name:'analysisCheck',
+								index:'analysisCheck',
+								width: 420,
 								align:'center',
 								sortable:true,
 								formatter:function(cellvalue,options,rows){
 									//cellvalue - 当前cell的值  
 									//options - 该cell的options设置，包括{rowId, colModel,pos,gid}  
 									//rowObject - 当前cell所在row的值，如{ id=1, name="name1", price=123.1, ...}  
-									return "<select onchange=viewReport(this.value,'"+rows.md5+"') style='margin:2px 10px 2px 0px;padding:1px;font-size:14px;font-family:'Microsoft YaHei''>" +
-											"<option value='none' selected>请选择规则</option><option value='net'>网络行为</option><option value='register'>注册表行为</option><option value='file'>文件行为</option>" +
-											"<option value='process'>进程行为</option><option value='all'>所有行为</option>" +
-											"</select>";
+									return "<div style='margin:2px 10px 2px 0px;padding:1px;font-size:14px;font-family:'Microsoft YaHei''>" +
+											"<input type='checkbox' name='checkbox' value='net'>网络行为" +
+											"<input type='checkbox' name='checkbox' value='register'>注册表行为" +
+											"<input type='checkbox' name='checkbox' value='file'>文件行为" +
+											"<input type='checkbox' name='checkbox' value='process'>进程行为" +
+											"<button style='margin-left:5px' value='查看' onclick=viewReport('"+rows.md5+"')>查看</button></div>";
 								}
 							}
 						
@@ -146,8 +164,7 @@ $(function () {
 					}
 				}	
 		);
-   
-    	datagrid.jqGrid('filterToolbar',{searchOperators:true});			
+   		
     	datagrid.jqGrid('navGrid','#TaskPager',{
     			edit : false,
     			add : false,
@@ -165,10 +182,17 @@ $(function () {
 function refreshTaskGrid(){
 	   $("#TaskList").trigger("reloadGrid");
 }
-function viewReport(val,md5){	
+function viewReport(md5){	
+	var val="";
+    $("input[name='checkbox']:checkbox").each(function(){ 
+       if($(this).attr("checked")){
+           val += $(this).val()+",";
+       }
+    })
+       
 	var title="";
 	var flag=1;
-	switch(val){
+/*	switch(val){
 		case "none":flag=0;break;
 		case "net":title="网络行为报告";break;
 		case "file":title="文件行为报告";break;
@@ -176,7 +200,7 @@ function viewReport(val,md5){
 		case "register":title="注册表行为报告";break;
 		case "all":title="所有行为报告";break;
 		default:title="恶意行为报告";break;
-	}
+	}*/
 	if(flag==1){
 		$.ajax({
 			url:"viewReport.action",
