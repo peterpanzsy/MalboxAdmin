@@ -12,10 +12,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.RequestAware;
 
 import cn.edu.xjtu.manage.business.Sample;
 import cn.edu.xjtu.manage.dao.SampleDao;
@@ -26,7 +28,9 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UploadSampleAction  extends ActionSupport{
+	
 	private static final long serialVersionUID = 837481714629791752L;
+	
 	int ID;
 	String name;
 	String path;
@@ -43,6 +47,7 @@ public class UploadSampleAction  extends ActionSupport{
 	private String absolutePath;
 	public static String UPLOADPATH="uploadSample/";
 	public static String REPORTPATH="reports/";
+	public final String sysFileName ="sysConfig.txt";
 	private static String WEB_ROOT_PATH;
 	private Boolean exist;
 	
@@ -91,10 +96,40 @@ public class UploadSampleAction  extends ActionSupport{
 	                }
 	            }
 	        }
+	        
 		return "SUCCESS";
 		
 	}
+	/**
+	 * 从文件中取出当前操作系统的信息
+	 */
+	private void getCurrentSysNum(){
+		  BufferedReader reader = null;
+		  try {
+			  reader = new BufferedReader(new FileReader(getFileCfg(sysFileName)));
+			  String temp = reader.readLine();
+			  if(temp == null){
+				  temp = "木有指定";
+			  }
+			  ActionContext.getContext().getSession().put("sysNum", temp);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+	}
 	
+	private File getFileCfg(String fileName){
+		 String uploadPath = ServletActionContext.getServletContext()  
+	                .getRealPath("/Config");  
+		 File file = new File(uploadPath+File.separator+fileName);
+		 return file;
+	}
 	private void copyFile(File sourceFile, File targetFile) throws IOException {
         BufferedInputStream inBuff = null;
         BufferedOutputStream outBuff = null;
@@ -132,8 +167,8 @@ public class UploadSampleAction  extends ActionSupport{
 	private String sord;
 	private int id;
 	private List<Integer> ids;
-	public String list(){		
-
+	public String list(){	
+		getCurrentSysNum();
 		SampleDao dao=new SampleDao();
 		
 		dataList = dao.getSampleList();
@@ -425,5 +460,5 @@ public class UploadSampleAction  extends ActionSupport{
 	public void setIds(List<Integer> ids) {
 		this.ids = ids;
 	}
-	
+
 }

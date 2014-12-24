@@ -1,4 +1,40 @@
 $(function () {
+	$("#sysNum").change(function(){
+				var sysNum = $("#sysNum").children('option:selected').val();
+				if(check_Integer(sysNum)){
+					$.ajax({
+						type : "POST",
+						url : "systemTransferAction.action",
+						data : {
+							sysNum:sysNum
+						},
+						dataType:"json",
+						success : function(data) {
+							if(data.result=="success"){
+								alert("更新成功！");
+							}else{
+								alert("更新失败！");
+							}							
+						},
+						error:function(msg){
+							alert("通讯错误，更新失败！！");						
+						}
+					});
+				}
+		});
+		
+		function check_Integer(obj){
+		    //定义正则表达式部分
+			 var Expression= /[0-9]/;  
+		    var reg=new RegExp(Expression);
+		    if(!reg.test(obj)){ 
+			    return false;
+		    }else{
+				return true;  
+			}
+		}
+	
+	
         $("#uploadify").uploadify({
             //指定swf文件
             'swf': 'js/uploadify/uploadify.swf',

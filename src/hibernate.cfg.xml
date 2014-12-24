@@ -8,7 +8,7 @@
 <property name="connection.url"> <![CDATA[jdbc:mysql://127.0.0.1:3306/malbox_admin?useUnicode=true&characterEncoding=utf8]]></property>
 	
 <property name="connection.username">root</property>
-<property name="connection.password">admin</property>
+<property name="connection.password">root</property>
 	  
 <property name="hbm2ddl.auto">update</property>
 

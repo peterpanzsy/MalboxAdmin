@@ -66,6 +66,11 @@
 			<result name="SUCCESS" type="json">				
 			</result>
 		</action>
+		
+		<action name="systemTransferAction" class="cn.edu.xjtu.manage.action.SystemTransferAction" >
+			<result name="SUCCESS" type="json">				
+			</result>
+		</action>
 		<!-- 工程end -->
 
 	</package>

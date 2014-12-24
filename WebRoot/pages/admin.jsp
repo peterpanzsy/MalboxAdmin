@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*,cn.edu.xjtu.manage.business.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -130,9 +131,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div>							
 			<!-- 表格 -->
       		<table id="TaskList" class="table table-striped table-bordered table-hover datatable " ></table>
-      		<div id="TaskPager" ></div>      		
+      		<div id="TaskPager" ></div>   
+      		<table class="table table-striped table-bordered table-hover datatable " ></table>
+      		 <div>
+	    		切换操作系统:<s:select id="sysNum" list="#{'0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9'}"
+	    		 	listKey="key" listValue="value" headValue="请选择"></s:select>
+	    		${sessionScope.sysNum}
+	    	</div>   
+	    	<s:debug></s:debug>		
 		</div>
-								
+
+									
     </div>
     <footer style="margin-top:200px;color: #999999;padding: 40px;text-align: center;color:white;background-color:rgba(149, 187, 224, 0.33)">
   		<span id="copyright">&copy; 2014 </span> 
