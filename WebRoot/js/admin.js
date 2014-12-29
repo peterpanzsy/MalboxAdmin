@@ -1,4 +1,15 @@
 $(function () {
+	$.ajax({
+		type : "POST",
+		url : "getCurrentSysNum.action",
+		dataType:"json",
+		success : function(data) {
+			$("#cursysNum").text(data.cursysNum);			
+		},
+		error:function(msg){			
+		}
+	});
+	
 	$("#sysNum").change(function(){
 				var sysNum = $("#sysNum").children('option:selected').val();
 				if(check_Integer(sysNum)){
@@ -12,6 +23,7 @@ $(function () {
 						success : function(data) {
 							if(data.result=="success"){
 								alert("更新成功！");
+								$("#cursysNum").text(data.sysNum);
 							}else{
 								alert("更新失败！");
 							}							

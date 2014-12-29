@@ -113,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			        <div id="fileQueue">
 			        </div>
 			        <input type="file" name="uploadify" id="uploadify" />
-			        <div >
+			        <div>
 			            <a href="javascript:$('#uploadify').uploadify('upload')">上传</a>| 
 			            <a href="javascript:$('#uploadify').uploadify('cancel')">取消上传</a>
 					</div>
@@ -133,12 +133,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       		<table id="TaskList" class="table table-striped table-bordered table-hover datatable " ></table>
       		<div id="TaskPager" ></div>   
       		<table class="table table-striped table-bordered table-hover datatable " ></table>
-      		 <div>
+      		 <div style="color:white">
 	    		切换操作系统:<s:select id="sysNum" list="#{'0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9'}"
 	    		 	listKey="key" listValue="value" headValue="请选择"></s:select>
-	    		${sessionScope.sysNum}
+	    		&nbsp;当前操作系统编号：<%-- ${sessionScope.sysNum} --%>
+	    		<span id="cursysNum"></span>
 	    	</div>   
-	    	<s:debug></s:debug>		
+	    	<%-- <s:debug></s:debug>		 --%>
 		</div>
 
 									

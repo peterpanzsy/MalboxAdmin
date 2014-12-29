@@ -51,6 +51,7 @@ public class UploadSampleAction  extends ActionSupport{
 	private static String WEB_ROOT_PATH;
 	private Boolean exist;
 	
+	String cursysNum;
 
 	public String getWebFileRoot(){
 		 ActionContext ac = ActionContext.getContext();     
@@ -103,7 +104,7 @@ public class UploadSampleAction  extends ActionSupport{
 	/**
 	 * 从文件中取出当前操作系统的信息
 	 */
-	private void getCurrentSysNum(){
+	public String getCurrentSysNum(){
 		  BufferedReader reader = null;
 		  try {
 			  reader = new BufferedReader(new FileReader(getFileCfg(sysFileName)));
@@ -111,6 +112,7 @@ public class UploadSampleAction  extends ActionSupport{
 			  if(temp == null){
 				  temp = "木有指定";
 			  }
+			  cursysNum=temp;
 			  ActionContext.getContext().getSession().put("sysNum", temp);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -122,6 +124,7 @@ public class UploadSampleAction  extends ActionSupport{
                 }
             }
         }
+		 return "SUCCESS";
 	}
 	
 	private File getFileCfg(String fileName){
@@ -168,7 +171,7 @@ public class UploadSampleAction  extends ActionSupport{
 	private int id;
 	private List<Integer> ids;
 	public String list(){	
-		getCurrentSysNum();
+		//getCurrentSysNum();
 		SampleDao dao=new SampleDao();
 		
 		dataList = dao.getSampleList();
@@ -460,5 +463,11 @@ public class UploadSampleAction  extends ActionSupport{
 	public void setIds(List<Integer> ids) {
 		this.ids = ids;
 	}
-
+	public String getCursysNum() {
+		return cursysNum;
+	}
+	public void setCursysNum(String cursysNum) {
+		this.cursysNum = cursysNum;
+	}
+	
 }
